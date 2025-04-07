@@ -43,10 +43,16 @@ def zefr_chatbot(user_input):
 
 # Streamlit GUI
 st.set_page_config(page_title="Zefr Chatbot", layout="centered")
-st.title("💬 Zefr Chatbot")
 
-user_input = st.text_input("Zefrに関する質問を入力してください：")
+# Zefrロゴ表示（GitHub直リンク想定）
+st.image("https://raw.githubusercontent.com/あなたのユーザー名/zefr-chatbot/main/zefr-dmp-data-CONTENT-2019-652x367.jpg", use_column_width=True)
+
+st.title("💬 Zefr Chatbot")
+st.markdown("---")
+
+user_input = st.text_input("🧑‍💻 Zefrに関する質問を入力してください：")
 
 if user_input:
     response = zefr_chatbot(user_input)
-    st.write("🤖 Zefr Bot:", response)
+    st.markdown(f"#### 🤖 Zefr Botの回答：")
+    st.write(response)
