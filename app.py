@@ -46,7 +46,7 @@ def zefr_chatbot(user_input):
 # Streamlit GUI
 st.set_page_config(page_title="Zefr Chatbot", layout="centered")
 
-# CSSで背景グラデーションと文字色変更
+# CSSで背景グラデーションと文字色、入力文字の色を白に変更
 st.markdown("""
     <style>
         .stApp {
@@ -54,7 +54,7 @@ st.markdown("""
             color: black;
         }
         .stTextInput > div > div > input {
-            color: black;
+            color: white !important;
         }
         h1, h2, h3, h4, h5, h6 {
             color: black !important;
@@ -62,11 +62,11 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Zefrロゴ（小さく表示）
-st.image("zefr-dmp-data-CONTENT-2019-652x367.jpg", width=120)
+# Zefrロゴ（少し大きく）
+st.image("zefr-dmp-data-CONTENT-2019-652x367.jpg", width=200)
 
-# MBKロゴ（同一フォルダにある前提）
-st.image("mbk-digital-logo.png", width=160)
+# MBKロゴ（透過PNG推奨）
+st.image("mbk-digital-logo.png", width=140)
 
 st.title("💬 Zefr Chatbot")
 st.markdown("---")
