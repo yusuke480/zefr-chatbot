@@ -44,8 +44,8 @@ def zefr_chatbot(user_input):
 # Streamlit GUI
 st.set_page_config(page_title="Zefr Chatbot", layout="centered")
 
-# Zefrロゴ表示（正しいGitHub Raw URL + 推奨パラメータ）
-st.image("https://raw.githubusercontent.com/yusukefukuoka/zefr-chatbot/main/zefr-dmp-data-CONTENT-2019-652x367.jpg", use_container_width=True)
+# Zefrロゴ画像をローカル（リポジトリ内）から表示
+st.image("zefr-dmp-data-CONTENT-2019-652x367.jpg", use_container_width=True)
 
 st.title("💬 Zefr Chatbot")
 st.markdown("---")
