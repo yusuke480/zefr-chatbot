@@ -2,6 +2,7 @@
 import random
 import streamlit as st
 from difflib import get_close_matches
+import base64
 
 def zefr_chatbot(user_input):
     user_input = user_input.lower()
@@ -44,8 +45,20 @@ def zefr_chatbot(user_input):
 # Streamlit GUI
 st.set_page_config(page_title="Zefr Chatbot", layout="centered")
 
-# Zefrロゴ画像をローカル（リポジトリ内）から表示
+# CSSで背景色変更（薄い水色）
+st.markdown("""
+    <style>
+        .stApp {
+            background-color: #e6f2ff;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# Zefrロゴ表示
 st.image("zefr-dmp-data-CONTENT-2019-652x367.jpg", use_container_width=True)
+
+# MBKロゴも追加（仮：同一フォルダにあると仮定）
+st.image("mbk-digital-logo.png", width=200)
 
 st.title("💬 Zefr Chatbot")
 st.markdown("---")
